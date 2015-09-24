@@ -1,0 +1,58 @@
+   
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+    .begPos { 
+    	position: relative;
+    	top:  50px; 
+	}
+    .showPos { 
+    	position: relative;
+    	top: -610px; 
+	}
+    .endPos { 
+    	position: relative;
+    	top:  0px; 
+	}
+	
+  </style>  
+  
+  <script>
+  $(function() {
+
+    function showState() {
+    	setTimeout(function() {
+    		$( "#effect" ).addClass( "showPos", 1500, transferDown );
+        }, 2000, transferDown);
+    }
+ 
+    function transferDown() {
+      setTimeout(function() {
+    	  $( "#effect" ).addClass( "endPos", 5000, endState );
+      }, 4000, endState );
+    };
+ 
+    function endState() {
+    	$( "#effect" ).addClass( "endPos");
+    }
+
+    showState();
+
+  });
+  </script>
+<center>
+<div  id="effect" class="begPos">
+	<a href="img/Flyer_A5_2015.pdf"><img src="img/Flyer_Dalbi_2015_Sponsoren.png" /></a>
+</div>
+</center>
+    
+</body>
+</html>
